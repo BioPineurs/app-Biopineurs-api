@@ -1,0 +1,39 @@
+<h1>Update contact</h1>
+
+<form action="/contacts/update/{{contact.id}}" method="post">
+  <div class="form-group">
+    <label for="firstName">Prénom*</label>
+    <input value="{{contact.firstName}}" class="form-control" type="text" id="firstName" name="firstName" placeholder="Prénom" required>
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">Nom*</label>
+    <input value="{{contact.lastName}}" class="form-control" type="text" id="lastName" name="lastName" placeholder="Nom" required>
+  </div>
+
+  <div class="form-group">
+    <label for="promo">Promotion (année de remise du diplôme)*</label>
+    <input value="{{contact.promo}}" class="form-control" type="number" id="promo" name="promo" placeholder="Ex : 2018">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Adresse mail*</label>
+    <input value="{{contact.email}}" class="form-control" type="text" id="email" name="email" placeholder="Adresse mail">
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Téléphone*</label>
+    <input value="{{contact.phone}}" class="form-control" type="number" id="phone" name="phone" placeholder="Téléphone" required>
+  </div>
+
+  <div class="form-group">
+    <label for="photo">Photo</label>
+    <input value="{{contact.photo}}" class="form-control" type="text" id="photo" name="photo" placeholder="Ex: http://lien.vers-l-image.com/img.jpeg">
+  </div>
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary">
+      Mettre à jour
+    </button>
+  </div>
+</form>

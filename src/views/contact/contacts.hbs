@@ -1,0 +1,51 @@
+<h1>Contacts</h1>
+
+<table class="table">
+ <thead>
+   <th>Prénom</th>
+   <th>Nom</th>
+   <th>Promotion</th>
+   <th>Adresse mail</th>
+   <th>Téléphone</th>
+   <th></th>
+ </thead>
+
+  {{#list contacts}}
+
+  <tr>
+    <td>
+      {{firstName}}
+    </td>
+    <td>
+      {{lastName}}
+    </td>
+    <td>
+      {{promo}}
+    </td>
+    <td>
+      {{email}}
+    </td>
+    <td>
+      {{phone}}
+    </td>
+    <td>
+      <a class="btn btn-outline-primary btn-sm" href="/contacts/id/{{id}}" role="button">
+        Voir
+      </a>
+      <a class="btn btn-outline-secondary btn-sm" href="/contacts/update/{{id}}" role="button">
+        Mettre à jour
+      </a>
+      <a class="btn btn-outline-danger btn-sm" href="/contacts/delete/{{id}}" role="button">
+        Supprimer
+      </a>
+    </td>
+  </tr>
+
+  {{/list}}
+</table>
+
+<div class="text-center">
+  <a class="btn btn-primary" href="/contacts/create" role="button">
+    Ajouter un contact
+  </a>
+</div>

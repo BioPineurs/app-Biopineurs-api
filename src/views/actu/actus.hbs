@@ -1,0 +1,43 @@
+<h1>Actus</h1>
+
+<table class="table">
+ <thead>
+   <th>Titre</th>
+   <th>Auteur</th>
+   <th>Corps</th>
+   <th></th>
+ </thead>
+
+  {{#list actus}}
+
+  <tr>
+    <td>
+        {{title}}
+    </td>
+    <td>
+      {{author}}
+    </td>
+    <td>
+      {{body}}
+    </td>
+    <td>
+      <a class="btn btn-outline-primary ary btn-sm" href="/actus/id/{{id}}" role="button">
+        Voir
+      </a>
+      <a class="btn btn-outline-secondary btn-sm" href="/actus/update/{{id}}" role="button">
+        Mettre à jour
+      </a>
+      <a class="btn btn-outline-danger btn-sm" href="/actus/delete/{{id}}" role="button">
+        Supprimer
+      </a>
+    </td>
+  </tr>
+
+  {{/list}}
+</table>
+
+<div class="text-center">
+  <a class="btn btn-primary" href="/actus/create" role="button">
+    Ajouter une actualité
+  </a>
+</div>

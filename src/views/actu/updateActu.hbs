@@ -1,0 +1,24 @@
+<h1>Update une actualite</h1>
+
+<form action="/actus/update/{{actu.id}}" method="post">
+  <div class="form-group">
+    <label for="title">Titre*</label>
+    <input value="{{actu.title}}" class="form-control" type="text" id="title" name="title" placeholder="Titre de l'article" required>
+  </div>
+
+  <div class="form-group">
+    <label for="author">Auteur*</label>
+    <input value="{{actu.author}}" class="form-control" type="text" id="author" name="author" placeholder="Auteur de l'article" required>
+  </div>
+
+  <div class="form-group">
+    <label for="body">Corps de l'article</label>
+    <input value="{{actu.body}}" class="form-control" type="text" id="body" name="body" placeholder="Corps de l'article">
+  </div>
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary">
+      Update
+    </button>
+  </div>
+</form>

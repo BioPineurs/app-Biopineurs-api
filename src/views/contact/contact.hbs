@@ -1,0 +1,24 @@
+<h1>Contact</h1>
+
+<div>
+  <div>Prénom : {{contact.firstName}}</div>
+  <div>Nom : {{contact.lastName}}</div>
+  <div>Promotion : {{contact.promo}}</div>
+  <div>Adresse mail : {{contact.email}}</div>
+  <div>Téléphone : {{contact.phone}}</div>
+  <div>
+    <img src="{{contact.photo}}" />
+</div>
+  <div></br></div>  
+
+<div class="text-center">
+  <a class="btn btn-primary" href="/contacts/create" role="button">
+    Ajouter un contact
+  </a>
+  <a class="btn btn-secondary" href="/contacts/update/{{contact.id}}" role="button">
+    Mettre à jour
+  </a>
+  <a class="btn btn-danger" href="/contacts/delete/{{contact.id}}" role="button">
+    Supprimer
+  </a>
+</div>

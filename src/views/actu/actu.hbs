@@ -1,0 +1,20 @@
+<h1>Actu</h1>
+
+<div>
+  <div>title : {{actu.title}}</div>
+  <div>author : {{actu.author}}</div>
+  <div>body : {{actu.body}}</div>
+  <div></br></div>  
+
+
+<div class="text-center">
+  <a class="btn btn-primary" href="/actus/create" role="button">
+    Ajouter une actualité
+  </a>
+  <a class="btn btn-secondary" href="/actus/update/{{actu.id}}" role="button">
+    Mettre à jour
+  </a>
+  <a class="btn btn-danger" href="/actus/delete/{{actu.id}}" role="button">
+    Supprimer
+  </a>
+</div>
