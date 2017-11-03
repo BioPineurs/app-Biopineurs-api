@@ -26,12 +26,16 @@ const actus = () => {
         id: actu._id,
         title: actu.title,
         author: actu.author, //author._id
-        body: actu.body
+        body: actu.body,
+        createdAt: actu.createdAt,     // la date de création de la fiche contact
+        updatedAt: actu.updatedAt     // la date de modification de la fiche contact
       }
     }
 
     // Avant d'envoyer la réponse on la tri par ordre alphabétique croissant sur le champs name
-    return _.sortBy(response, 'name');
+    //return _.sortBy(response, 'updatedAt');
+    var temp = _.sortBy(response, 'updatedAt'); //classsement actu du plus ancien au plus récent
+    return temp.reverse(); //inversement de l'ordre pour avoir l'actu modifié la plus récente
   });
 }
 
@@ -52,7 +56,9 @@ const actu = (_id) => {
       id: data._id,
       title: data.title,
       author: data.author,
-      body: data.body
+      body: data.body,
+      createdAt: data.createdAt,     // la date de création de la fiche contact
+      updatedAt: data.updatedAt     // la date de modification de la fiche contact
     };
     return response;
   });

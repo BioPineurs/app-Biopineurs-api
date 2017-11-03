@@ -21,7 +21,9 @@ let Schema = new mongoose.Schema({
 let Schema = new mongoose.Schema({
   title: { type: String },         // le titre de l'actu
   author: { type: String },        // l'auteur de l'actu
-  body: { type: String }  // le corps de l'actu
+  body: { type: String },  // le corps de l'actu
+  createdAt: { type: Date },     // la date de création de la fiche contact
+  updatedAt: { type: Date },     // la date de modification de la fiche contact
 });
 
 let Model = mongoose.model('Actu', Schema);
@@ -42,16 +44,14 @@ export default {
   getActu: (_id) => {
     return Model.findOne({ _id }).exec();
   },
-/*
-  getAuthor: () => {
-  	return Model.
-  },
-*/
+
   createActu: (actu) => {
     return Model.create({
       title: actu.title,
       author: actu.author,
-      body: actu.body
+      body: actu.body,
+      createdAt: new Date(),
+      updatedAt: new Date(),
     });
   },
 
@@ -59,7 +59,9 @@ export default {
     return Model.findOneAndUpdate({ _id }, {
       title: actu.title,
       author: actu.author,
-      body: actu.body
+      body: actu.body,
+	  //createdAt: new Date(),
+	  updatedAt: new Date(),
     }, {upsert: true}).exec();
   },
 
