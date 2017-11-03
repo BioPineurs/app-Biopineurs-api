@@ -1,7 +1,7 @@
 {
-  "name": "Hackx",
+  "name": "Biopineurs",
   "version": "0.0.1",
-  "description": "Api du workshop Hackx",
+  "description": "Api de l application des biopineurs",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon -e js,hbs,scss index",
