@@ -7,6 +7,8 @@ Le code va maintenant est en local sur votre machine. Vous pouvez ouvrir le doss
 
 ## Avant de lancer l'application
 Vous allez maintenant entrer dans le dossier en faisant un `cd app-Biopineurs-api` puis vous allez devoir lancer l'installation des dépendances avec `npm install`
+NOTE : Sur Linux ou Mac, il faudra peut être lancer cette commande (ou les suivantes d'ailleurs) sous privilège administrateur.
+Pour ce faire ajoutez `sudo` et rentrez le mot de passe administrateur lorsque demandé.
 
 ## Lancer l'application
 Pour lancer l'application, vous avez besoin de vous connecter sur une base de données. Dans un temps 1, nous allons nous connecter sur une base de données à distance pour simplifier la situation, qui est hébergée sur [https://mlab.com/](https://mlab.com/) et dont nous allons vous donner les identifiants juste en dessous.
