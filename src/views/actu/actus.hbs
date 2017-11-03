@@ -8,11 +8,19 @@
    <th></th>
  </thead>
 
+<div> 
+<script type="text/javascript">
+  var timeout = setTimeout("location.reload(true);",3000); //en ms, i.e. 1000 = 1s
+  function resetTimeout() {
+    clearTimeout(timeout);
+    timeout = setTimeout("location.reload(true);",3000);
+  }
+</script>
   {{#list actus}}
 
   <tr>
     <td>
-        {{title}}
+      {{title}}
     </td>
     <td>
       {{author}}
@@ -35,6 +43,8 @@
 
   {{/list}}
 </table>
+</div>
+
 
 <div class="text-center">
   <a class="btn btn-primary" href="/actus/create" role="button">

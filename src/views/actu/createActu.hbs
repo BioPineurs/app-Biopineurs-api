@@ -6,15 +6,28 @@
     <input class="form-control" type="text" id="title" name="title" placeholder="Titre du post" required>
   </div>
 
+<!--
   <div class="form-group">
     <label for="author">Auteur*</label>
     <input class="form-control" type="text" id="author" name="author" placeholder="Auteur du post" required>
   </div>
+-->
+
+<!-- Selectionner un auteur depuis une liste predefinie depuis la BDD des contacts -->
+  <div class="form-group">
+    <label for="author">Auteur*</label>
+    <select class="form-control" id="author" name="author" required>
+      {{#list contacts}}
+      <option value="{{firstName}} {{lastName}}">{{firstName}} {{lastName}}</option>
+      {{/list}}
+    </select>
+  </div>
 
   <div class="form-group">
     <label for="body">Corps de l'article</label>
-    <textarea class="form-control" type="text" id="body" name="body">Corps de l'article</textarea>
+    <input class="form-control" type="text" id="body" name="body" placeholder="Corps du post" required>
   </div>
+
   <div class="text-center">
     <button type="submit" class="btn btn-primary">
       Create

@@ -20,8 +20,8 @@ let Schema = new mongoose.Schema({
 
 let Schema = new mongoose.Schema({
   title: { type: String },         // le titre de l'actu
-  author: { type: String },        // l'autheur de l'actu
-  body: { type: String }  // le corps de l'artu
+  author: { type: String },        // l'auteur de l'actu
+  body: { type: String }  // le corps de l'actu
 });
 
 let Model = mongoose.model('Actu', Schema);
@@ -42,7 +42,11 @@ export default {
   getActu: (_id) => {
     return Model.findOne({ _id }).exec();
   },
-
+/*
+  getAuthor: () => {
+  	return Model.
+  },
+*/
   createActu: (actu) => {
     return Model.create({
       title: actu.title,
