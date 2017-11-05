@@ -90,7 +90,7 @@ server.get('/infos', InfoController.getInfo);
 // Routes pour les APIs
 server.get('/api/', HomeController.getIndexApi);
 
-server.get('/api/contacts', ContactController.getContacts);
+server.get('/api/contacts', ContactController.getContactsApi);
 server.get('/api/contacts/id/:id', ContactController.getContactApi);
 server.post('/api/contacts/create', ContactController.postCreateContactApi);
 server.post('/api/contacts/update/:id', ContactController.postUpdateContactApi);
